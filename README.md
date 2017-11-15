@@ -1,4 +1,16 @@
-# Vcars2AngularAcctSearch
+# Install:
+
+1)	Install Node.js if not already installed: https://nodejs.org/en/
+2)	Install git if not already installed: https://git-scm.com/
+3)	Clone the code repository using git: $> git clone https://github.com/ADS-Frank/AcctSearchMock.git
+4)	Change directory to the clone repo: $> cd AcctSearchMock
+5)	Install necessary dependencies: $> npm install
+6)	Start server: $> ng serve
+7)	Navigate to browser (currently only targets chrome): http://localhost:4200
+
+--------------------------------------------------------------------------
+
+## Vcars2AngularAcctSearch
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
