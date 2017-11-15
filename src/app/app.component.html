@@ -1,0 +1,202 @@
+<mat-sidenav-container>
+
+    <mat-sidenav id="sidenav" #sidenav align="end">
+
+        <div id="sidenavAccountArea">
+
+            <mat-card class="sidenavAccount">
+                <button mat-button matTooltip="Switch to account.">
+                    <mat-icon>undo</mat-icon>
+                    <span>Client Name #1 - Account #1</span>
+                </button>
+
+                <span class="sidenavAccountFiller"></span>
+
+                <button mat-button color="warn" matTooltip="Remove account from list.">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+
+            <mat-card class="sidenavAccount">
+                <button mat-button matTooltip="Switch to account.">
+                    <mat-icon>undo</mat-icon>
+                    <span>Client Name #2 - Account #2</span>
+                </button>
+
+                <span class="sidenavAccountFiller"></span>
+
+                <button mat-button color="warn" matTooltip="Remove account from list.">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+
+            <mat-card class="sidenavAccount">
+                <button mat-button matTooltip="Switch to account.">
+                    <mat-icon>undo</mat-icon>
+                    <span>Client Name #3 - Account #3</span>
+                </button>
+
+                <span class="sidenavAccountFiller"></span>
+
+                <button mat-button color="warn" matTooltip="Remove account from list.">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+
+            <mat-card class="sidenavAccount">
+                <button mat-button matTooltip="Switch to account.">
+                    <mat-icon>undo</mat-icon>
+                    <span>Client Name #4 - Account #4</span>
+                </button>
+
+                <span class="sidenavAccountFiller"></span>
+
+                <button mat-button color="warn" matTooltip="Remove account from list.">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+
+        </div>
+
+        <div id="systemSwitch">
+            <button class="systemButton" mat-raised-button color="accent" matTooltip="Switch to Web Collections.">
+                <mat-icon>monetization_on</mat-icon>
+                <span>Web Collections</span>
+            </button>
+
+            <button class="systemButton" mat-raised-button color="accent" matTooltip="Switch to Prevention of Writeoff.">
+                <mat-icon>report</mat-icon>
+                <span>POW</span>
+            </button>
+        </div>
+
+    </mat-sidenav>
+
+    <div id="navbar">
+        <nav>
+            <button mat-button id="menu" matTooltip="Main Menu." [matMenuTriggerFor]="mainMenu">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <div matTooltip="This page is used for searching accounts." id="title">
+                <mat-icon>search</mat-icon>&nbsp;
+                <span>
+                    Account Search
+                </span>
+            </div>
+
+            <span id="titleFiller"></span>
+
+            <button mat-button color="warn" id="accounts" matTooltip="Other Open Accounts." (click)="sidenav.toggle()">
+                <mat-icon>group</mat-icon>
+            </button>
+        </nav>
+
+        <div id="actionButtons">
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>pool</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>check</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>restaurant</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>computer</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>ring_volume</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>contacts</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>bug_report</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>backup</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>favorite</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" matTooltip="Page Action Buttons go here.">
+                <mat-icon>explore</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>dns</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>copyright</mat-icon>
+            </button>
+
+            <button class="actionButton" mat-raised-button color="accent" disabled matTooltip="Page Action Buttons go here.">
+                <mat-icon>credit_card</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div id="content">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>
+
+<mat-menu #mainMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="file">
+        <mat-icon>folder</mat-icon>
+        <span>File</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="info">
+        <mat-icon>history</mat-icon>
+        <span>Info</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="actions">
+        <mat-icon>priority_high</mat-icon>
+        <span>Actions</span>
+    </button>
+    <button mat-menu-item>
+        <mat-icon>info</mat-icon>
+        <span>Help</span>
+    </button>
+</mat-menu>
+
+<mat-menu #file="matMenu">
+    <a mat-menu-item routerLink="/" matTooltip="Used to retrieve account information from database.">
+        <mat-icon>search</mat-icon>
+        <span>Account Search</span>
+    </a>
+    <button mat-menu-item>
+        <mat-icon>print</mat-icon>
+        <span>Screenshot</span>
+    </button>
+</mat-menu>
+
+<mat-menu #info="matMenu">
+    <button mat-menu-item matTooltip="Used to view main information about the customer's account.">
+        <mat-icon>fingerprint</mat-icon>
+        <span>Customer Information</span>
+    </button>
+    <a mat-menu-item>
+        <mat-icon>visibility</mat-icon>
+        <span>PAN Information</span>
+    </a>
+</mat-menu>
+
+<mat-menu #actions="matMenu">
+    <button mat-menu-item matTooltip="Used to increase monthly credit limit for customer's account.">
+        <mat-icon>trending_up</mat-icon>
+        <span>Credit Limit Increase</span>
+    </button>
+</mat-menu>
